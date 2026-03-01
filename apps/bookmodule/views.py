@@ -1,7 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def index(request):
+# ====== دوال اللاب القديم (ما حذفتها) ======
+def index_old(request):
+
     name = request.GET.get("name", "world!")
     return HttpResponse(f"Hello, {name}")
 
@@ -20,5 +22,22 @@ def viewbook(request, bookId):
 
     context = {'book': targetBook}
     return render(request, 'bookmodule/show.html', context)
+
 def index3(request, val1, val2):
     return HttpResponse(f"val1 = {val1}, val2 = {val2}")
+
+
+# ====== دوال اللاب الجديد (HTML + CSS + Templates) ======
+# ملاحظة: لازم تكون أسماء الدوال مطابقة لأسماء الروابط في urls.py
+
+def index(request):
+    return render(request, 'bookmodule/index.html')
+
+def aboutus(request):
+    return render(request, 'bookmodule/aboutus.html')
+
+def list_books(request):
+    return render(request, 'bookmodule/list_books.html')
+
+def view_one_book(request, book_id):
+    return render(request, 'bookmodule/one_book.html', {"book_id": book_id})
