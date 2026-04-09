@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f7f1f1; /* لون خلفية العنوان */
+        }
+
+        .link-item {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            color: #FF8C00; /* برتقالي */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .link-item.one {
+            background-color: rgb(27, 24, 24);
+        }
+
+        .link-item.two {
+            background-color: #90ee90; /* أخضر فاتح */
+        }
+
+        .link-item.three {
+            background-color: #d3d3d3; /* رمادي فاتح */
+        }
+
+        .link-item.four {
+            background-color: #a9a9a9; /* رصاصي */
+        }
+
+        /* تأثير عند المرور على الرابط */
+        .link-item:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<a class="link-item one" href="https://www.qu.edu.sa" target="_blank">
+    Go to QU website (open a new tab)
+</a>
+
+<a class="link-item two" href="https://www.qu.edu.sa">
+    Go to QU website (open in the same page/tab)
+</a>
+
+<a class="link-item three" href="https://www.qu.edu.sa">
+    Go to QU website (open in the same page/tab)
+</a>
+
+</body>
+</html>

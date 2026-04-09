@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px; /* مسافة في بداية الصفحة */
+            font-family: Arial, sans-serif;
+            color: black; /* النصوص بالأسود */
+        }
+
+        /* العنوان يغطي كامل عرض الصفحة بلون تفاني */
+        h2 {
+            width: 100%; /* يغطي كامل الصفحة */
+            background-color: #89ecd5; /* لون تفاني */
+            color: black; /* نص أسود */
+            padding: 15px 20px; /* مسافة داخل العنوان */
+            text-align: left; /* العنوان على اليسار */
+            font-size: 1.3em; /* صغير شوي */
+            margin: 0 0 20px 0; /* مسافة بين العنوان وبقية المحتوى */
+            border-radius: 5px;
+        }
+
+        ul, ol {
+            margin: 0 0 20px 40px; /* مسافة للقوائم */
+        }
+
+        li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>The Best Features of the Internet</h2>
+
+<ul>
+    <li>You can meet new people from countries around the world.</li>
+    <li>You have access to new media as it becomes public:
+        <ul>
+            <li>New games</li>
+            <li>New applications
+                <ol>
+                    <li>For business</li>
+                    <li>For pleasure</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+    <li>Around the clock news</li>
+    <li>Search engines</li>
+    <li>Shopping</li>
+    <li>Programming
+        <ol>
+            <li>XML</li>
+            <li>Java</li>
+            <li>HTML5</li>
+            <li>JavaScript</li>
+            <li>New languages</li>
+        </ol>
+    </li>
+    <li>Links</li>
+    <li>Keeping in touch with old friends</li>
+    <li>It's the technology of the future!</li>
+</ul>
+
+</body>
+</html>

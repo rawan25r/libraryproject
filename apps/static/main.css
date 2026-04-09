@@ -1,0 +1,57 @@
+/* ====== عنوان فوق الجداول ====== */
+.table-title {
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* ====== تنسيق الجداول ====== */
+.styled-table {
+    width: 350px;
+    margin: 0 auto; /* يخلي جدول 1 في النص */
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+
+.styled-table td {
+    border: 1px solid #444;
+    padding: 6px;
+    text-align: center;
+}
+
+.styled-table th {
+    background-color: #d9ead3;
+    font-weight: bold;
+}
+
+.total-row {
+    background-color: #fce5cd;
+    font-weight: bold;
+}
+
+/* ====== تنسيق الصورة + الجدول جنب بعض ====== */
+.table-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* يخلي الصورة وسط الجدول */
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.table-image-container img {
+    width: 260px;
+    border-radius: 10px;
+}
+.format-title{
+background:#e6e6c8;
+padding:10px;
+color:#2e7d32;
+}.blue-box{
+background-color: #6cc0c8;  /* لون تفاني */
+color: white;
+padding: 12px;
+width: 100%;   /* يخلي الخط بعرض الصفحة كامل */
+font-weight: bold;
+}

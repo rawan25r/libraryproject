@@ -1,0 +1,42 @@
+/* تنسيق الروابط العلوية */
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* تغيير لون الرابط عند المرور */
+a:hover {
+    color: #007bff;
+}
+
+/* تنسيق العناوين */
+h1 {
+    color: #444;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #555;
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق النص */
+p {
+    font-size: 18px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: blue;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    margin-right: 15px;
+    font-size: 20px;
+}
