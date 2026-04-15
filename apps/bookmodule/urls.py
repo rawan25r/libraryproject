@@ -17,4 +17,14 @@ urlpatterns = [
     path('all', views.list_all_books, name='list_all_books'),
 
 
+    path('lab8/task1/', views.lab8_task1),
+    path('lab8/task2/', views.lab8_task2),
+    path('lab8/task3/', views.lab8_task3),
+    path('lab8/task4/', views.lab8_task4),
+    path('lab8/task5/', views.lab8_task5),
+    path('lab8/task7/', views.students_per_city),
+    path('lab8/seed/', views.seed_all_data, name='seed_all'),
+
+
+
 ]

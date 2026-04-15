@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+
+<h2>Books with price ≤ 80</h2>
+<ul>
+    {% for b in books %}
+        <li>{{ b.title }} — {{ b.price }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

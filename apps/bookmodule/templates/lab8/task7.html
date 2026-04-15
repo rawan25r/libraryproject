@@ -1,0 +1,6 @@
+<h2>Number of Students in Each City</h2>
+<ul>
+    {% for item in data %}
+        <li>{{ item.city }} — {{ item.num_students }} students</li>
+    {% endfor %}
+</ul>
