@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Publisher(models.Model):
     name = models.CharField(max_length=200)
     location = models.CharField(max_length=300)
@@ -18,7 +17,9 @@ class Author(models.Model):
 
 
 class Book(models.Model):
-    # حق لاب 9
+    # ============================
+    #        LAB 9 FIELDS
+    # ============================
     title = models.CharField(max_length=100)
     price = models.FloatField(default=0.0)
     quantity = models.IntegerField(default=1)
@@ -28,7 +29,9 @@ class Book(models.Model):
     publisher = models.ForeignKey(Publisher, null=True, on_delete=models.SET_NULL)
     authors = models.ManyToManyField(Author)
 
-    # حق لاب 8 (تبقى موجودة)
+    # ============================
+    #        LAB 8 FIELDS
+    # ============================
     author = models.CharField(max_length=200, null=True)
     edition = models.SmallIntegerField(default=1)
 

@@ -4,24 +4,18 @@ from . import views
 app_name = "bookmodule"
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.index),
 
-    # Lab 8
-    path('lab8/task1/', views.lab8_task1),
-    path('lab8/task2/', views.lab8_task2),
-    path('lab8/task3/', views.lab8_task3),
-    path('lab8/task4/', views.lab8_task4),
-    path('lab8/task5/', views.lab8_task5),
-    path('lab8/task7/', views.students_per_city),
-    path('lab8/seed/', views.seed_all_data, name='seed_all'),
+    # PART 1
+    path('lab9_part1/listbooks/', views.list_books),
+    path('lab9_part1/addbook/', views.add_book),
+    path('lab9_part1/editbook/<int:id>/', views.edit_book),
+    path('lab9_part1/deletebook/<int:id>/', views.delete_book),
 
-    # Lab 9
-    path('lab9/task1/', views.task1),
-    path('lab9/task2/', views.task2),
-    path('lab9/task3/', views.task3),
-    path('lab9/task4/', views.task4),
-    path('lab9/task5/', views.task5),
-    path('lab9/task6/', views.task6),
-    path("seed/", views.seed_data, name="seed"),
-
+    # PART 2 (Django Forms)
+    path('lab9_part2/listbooks/', views.list_books_p2),
+    path('lab9_part2/addbook/', views.add_book_p2),
+    path('lab9_part2/editbook/<int:id>/', views.edit_book_p2),
+    path('lab9_part2/deletebook/<int:id>/', views.delete_book_p2),
+    
 ]
