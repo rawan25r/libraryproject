@@ -1,0 +1,7 @@
+<h2>Edit Student2</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ sform.as_p }}
+    <button type="submit">Update</button>
+</form>

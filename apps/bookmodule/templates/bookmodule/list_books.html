@@ -33,25 +33,32 @@
 
 <h1>List of Books</h1>
 
+<!-- ============================= -->
+<!-- هنا أضفت فقط كود Django Loop -->
+<!-- ============================= -->
+
+{% for book in books %}
+
 <a href="one_book.html">
-    <h2>Internet &amp; World Wide Web How to Program</h2>
+    <h2>{{ forloop.counter }}) {{ book.title }}</h2>
 </a>
 
 <a href="one_book.html">
-    <img src="book1.jpg" width="200" height="200" alt="Book1 img">
+    {% if book.image %}
+        <img src="{{ book.image.url }}" width="200" height="200" alt="Book1 img">
+    {% else %}
+        <img src="book1.jpg" width="200" height="200" alt="Book1 img">
+    {% endif %}
 </a>
 
 <hr>
 
-<h2>2) C++ How to Program, Late Objects Version</h2>
-<img src="book2.jpg" width="200" height="200" alt="Book2 img">
+{% endfor %}
 
-<hr>
-
-<h2>3) Images in Another Folder</h2>
-<img src="book3.jpg" width="200" height="200" alt="Book3 img">
-
-<hr>
+<!-- زر إضافة كتاب -->
+<a href="/books/add/">
+    <button>Add New Book</button>
+</a>
 
 </body>
 </html>

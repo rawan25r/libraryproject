@@ -1,0 +1,29 @@
+
+
+<h2>Products List</h2>
+
+<a href="/products/add/">Add Product</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for p in products %}
+
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+        <td>
+            <img src="/media/{{ p.image }}" width="120">
+        </td>
+        <td>
+            <a href="/products/edit/{{ p.id }}/">Edit</a> |
+            <a href="/products/delete/{{ p.id }}/">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

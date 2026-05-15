@@ -1,0 +1,13 @@
+<h2>Add Student2</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h3>Student Information</h3>
+    {{ sform.as_p }}
+
+    <h3>Address Information</h3>
+    {{ aform.as_p }}
+
+    <button type="submit">Save</button>
+</form>

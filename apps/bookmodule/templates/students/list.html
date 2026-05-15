@@ -1,0 +1,30 @@
+<h2>Students List</h2>
+
+<a href="{% url 'bookmodule:add_student' %}">Add Student</a>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.address.city }}</td>
+        <td>{{ s.address.street }}</td>
+        <td>
+            <a href="{% url 'bookmodule:edit_student' s.id %}">Edit</a> |
+            <a href="{% url 'bookmodule:delete_student' s.id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No students found.</td>
+    </tr>
+    {% endfor %}
+</table>
