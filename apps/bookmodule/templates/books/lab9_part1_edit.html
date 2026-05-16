@@ -22,12 +22,24 @@
             border: none;
             border-radius: 4px;
         }
+        .logout {
+            float: right;
+            margin-top: -40px;
+        }
     </style>
 </head>
 
 <body>
 
+<!-- زر تسجيل الخروج -->
+<a href="/users/logout" class="logout">Logout</a>
+
 <h2>Edit Book</h2>
+
+<!-- رسائل Django -->
+{% for msg in messages %}
+<p>{{ msg }}</p>
+{% endfor %}
 
 <form method="POST">
     {% csrf_token %}

@@ -8,10 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # تطبيقاتك
-   # path('books/', include("apps.bookmodule.urls")),
     path('users/', include("apps.usermodule.urls")),
     path('bookmodule/', include("apps.bookmodule.urls")),
-
 ]
 
 # ⭐ مهم جداً لعرض الصور (LAB 11 Task 3)

@@ -7,7 +7,8 @@ urlpatterns = [
     path('', views.index),
 
     # PART 1
-    path('lab9_part1/listbooks/', views.list_books),
+    path('lab9_part1/listbooks/', views.list_books, name="list_books"),
+
     path('lab9_part1/addbook/', views.add_book),
     path('lab9_part1/editbook/<int:id>/', views.edit_book),
     path('lab9_part1/deletebook/<int:id>/', views.delete_book),
@@ -35,4 +36,9 @@ urlpatterns = [
     path("products/add/", views.add_product, name="add_product"),
     path("products/edit/<int:id>/", views.edit_product, name="edit_product"),
     path("products/delete/<int:id>/", views.delete_product, name="delete_product"),
+  
+    
+    path("register/", views.register, name="register"),
+    path("login/", views.login_user, name="login"),
+    path("logout/", views.logout_user, name="logout"),
 ]

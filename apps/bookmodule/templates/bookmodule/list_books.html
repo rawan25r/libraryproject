@@ -5,12 +5,6 @@
 
     <title>List of Books</title>
 
-    <meta name="keywords" content="Books, recent, Learning, library">
-    <meta name="description" content="Books website">
-    <meta name="author" content="author name">
-
-    <link rel="icon" href="qu-icon.png">
-
     <style>
         h1 { color: green; }
         h2 { color: lightskyblue; }
@@ -18,47 +12,57 @@
             font-family: verdana;
             font-size: 20px;
         }
-    </style>
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
 
-    <link rel="stylesheet" href="styles.css">
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+    </style>
 </head>
 
 <body>
 
 <div class="topnav">
-    <a href="index.html">Home</a>
-    <a class="active" href="list_books.html">List Books</a>
-    <a href="aboutus.html">About</a>
+    <a href="/">Home</a>
+    <a class="active" href="/bookmodule/lab9_part1/listbooks/">List Books</a>
+    <a href="/about/">About</a>
+
+    <!-- زر تسجيل الخروج -->
+    <a href="/users/logout/" style="float:right;">Logout</a>
 </div>
 
 <h1>List of Books</h1>
 
-<!-- ============================= -->
-<!-- هنا أضفت فقط كود Django Loop -->
-<!-- ============================= -->
-
 {% for book in books %}
-
-<a href="one_book.html">
     <h2>{{ forloop.counter }}) {{ book.title }}</h2>
-</a>
 
-<a href="one_book.html">
     {% if book.image %}
-        <img src="{{ book.image.url }}" width="200" height="200" alt="Book1 img">
-    {% else %}
-        <img src="book1.jpg" width="200" height="200" alt="Book1 img">
+        <img src="{{ book.image.url }}" width="200" height="200">
     {% endif %}
-</a>
 
-<hr>
-
+    <hr>
 {% endfor %}
 
-<!-- زر إضافة كتاب -->
-<a href="/books/add/">
+<a href="/books/lab9_part2/addbook/">
     <button>Add New Book</button>
 </a>
+<p><a href="/users/logout/">Logout</a></p>
 
 </body>
 </html>
